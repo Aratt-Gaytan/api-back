@@ -16,12 +16,11 @@ app.use(cors());
 
 app.set('trust proxy', true);
 
-// add routes
-app.use(express.static(__dirname + '/public'));
+
 
 
 app.get("/", (req, res)=>{
-  res.render(__dirname+"/public/index.html");
+  res.json({"hola": "hola"});
 });
 
 app.get('/dato', async (req, res) => {
